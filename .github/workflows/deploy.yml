@@ -20,9 +20,9 @@ jobs:
       - name: Build
         run: deno task build
 
-			- name: Deploy to Deno Deploy
-				uses: denoland/deployctl@v1
-				with:
+      - name: Deploy to Deno Deploy
+        uses: denoland/deployctl@v1
+        with:
           project: "cheap-badger-29"
-					entrypoint: https://deno.land/std/http/file_server.ts
-					root: dist
+          entrypoint: https://deno.land/std/http/file_server.ts
+          root: dist
